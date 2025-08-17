@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/index.css">
+	<title>Web.Dev</title>
+</head>
+
+<body>
+	<header class="header">
+		<div class="container header__flex">
+			<a href="index.html" class="header__logo">
+				Web.Dev
+			</a>
+			<nav class="nav">
+				<ul class="nav__list">
+					<li class="nav__item"><a href="index.html" class="nav__link" title="Главная">Главная</a></li>
+					<li class="nav__item"><a href="pages/form.html" class="nav__link" title="Форма">Форма</a></li>
+					<li class="nav__item"><a href="#!" class="nav__link" title="3-страница">3-страница</a></li>
+					<li class="nav__item"><a href="#!" class="nav__link" title="4-страница">4-страница</a></li>
+					<li class="nav__item"><a href="#!" class="nav__link" title="5-страница">5-страница</a></li>
+				</ul>
+			</nav>
+			<div class="header__profile">
+				<button class="header__btn open__modal-btn">Войти</button>
+				<button class="header__btn open__modal-registration">Регистрация</button>
+			</div>
+		</div>
+	</header>
+	<main>
+
+
+
+
+
+		<!-- login -->
+		<div class="modal">
+			<div class="modal__container modal__login">
+				<button class="modal__btn modal__close">x</button>
+				<div class="modal__content">
+					<form action="">
+						<h2 class="modal__form-title">Login</h2>
+						<div class="input__box">
+							<input type="text" placeholder="UserName" required>
+						</div>
+						<div class="input__box">
+							<input type="password" placeholder="Password" required>
+						</div>
+						<div class="remember">
+							<label for="remember">
+								<input type="checkbox" name="remember" id="remember">
+								Запомнить меня
+							</label>
+							<a href="#!" class="remember__link forgot__password">Забыли пароль?</a>
+						</div>
+
+						<button type="submit" class="btn__login">Login</button>
+						<div class="register__box">
+							<a href="#!" class="">зарегистрироваться</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- registration -->
+		<div class="modal modal__registration">
+			<div class="modal__container ">
+				<button class="modal__btn modal__close">x</button>
+				<div class="modal__content">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et omnis tempora eos eveniet? Sunt quos delectus
+						necessitatibus aperiam nobis eligendi ad magni eveniet totam, atque iusto quae deserunt tempore! Velit!
+					</p>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer></footer>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/index.css">
+	<title>Web.Dev</title>
+</head>
+
+<body>
+	<header class="header">
+		<div class="container header__flex">
+			<a href="../index.html" class="header__logo">
+				Web.Dev
+			</a>
+			<nav class="nav">
+				<ul class="nav__list">
+					<li class="nav__item"><a href="../index.html" class="nav__link" title="Главная">Главная</a></li>
+					<li class="nav__item"><a href="form.html" class="nav__link" title="Форма">Форма</a></li>
+					<li class="nav__item"><a href="#!" class="nav__link" title="3-страница">3-страница</a></li>
+					<li class="nav__item"><a href="#!" class="nav__link" title="4-страница">4-страница</a></li>
+					<li class="nav__item"><a href="#!" class="nav__link" title="5-страница">5-страница</a></li>
+				</ul>
+			</nav>
+			<div class="header__profile">
+				<button class="header__btn open__modal-btn">Войти</button>
+				<button class="header__btn open__modal-registration">Регистрация</button>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<div class="form__container">
+				<h2 class="form__title">Заполните Анкету</h2>
+				<form class="form">
+					<div class="form__user">
+						<label for="lastName">Фамилия</label>
+						<input type="text" name="lastName" id="lastName" required>
+					</div>
+					<div class="form__user"> <label for="FirstName">Имя</label>
+						<input type="text" name="FirstName" id="FirstName" required>
+					</div>
+					<div class="form__user"> <label for="MidName">Отчество</label>
+						<input type="text" name="MidName" id="MidName" required>
+					</div>
+					<div class="form__user form__date">
+						<label for="date">День Рождения</label>
+						<input type="date" name="date" id="date" required>
+					</div>
+					<div class="form__user form__phone">
+						<label for="phone">Контактный номер</label>
+						<input type="text" name="phone-number" id="phone" placeholder="+998(90)999-99-99" required>
+					</div>
+					<div class="form__user form__email">
+						<label for="email">E-mail</label>
+						<input type="email" name="email" id="email" placeholder="...@gmail.com" required>
+					</div>
+					<div class="form__user form__select-checkbox">
+						<div class="select__title">
+							<h2>Выберите один или несколько центров госуслуг,в которых Вы хотели бы
+								работать</h2>
+						</div>
+						<div class="select__checkbox">
+							<label for="select1">улица-1
+								<input type="checkbox" name="checkbox" id="select1" required>
+							</label>
+							<label for="select2">улица-2
+								<input type="checkbox" name="checkbox" id="select2" required>
+							</label>
+							<label for="select3">улица-3
+								<input type="checkbox" name="checkbox" id="select3" required>
+							</label>
+							<label for="select4">улица-4
+								<input type="checkbox" name="checkbox" id="select4" required>
+							</label>
+						</div>
+					</div>
+					<div class="form__user form__select">
+						<label for="select">Образование(обязательно наличие оконченного высшего образования)</label>
+						<select name="experience" id="select">
+							<option value="0">Бакалавриат</option>
+							<option value="1">Магистратура</option>
+							<option value="2">Высшее образование</option>
+							<option value="3">неполное высшее образование</option>
+							<option value="4">незаконченное высшее образование</option>
+							<option value="5">среднее специальное образование</option>
+							<option value="6">дошкольное образование</option>
+						</select>
+					</div>
+					<div class="form__user form__text">
+						<label for="aboutMyself">Почему вы хотите работать в нашей Организации?</label>
+						<textarea name="about" id="aboutMyself" placeholder="Я квалифицированный сотрудник.."></textarea>
+					</div>
+					<div class="from__btn">
+						<button type="submit" class="btn__submit">Отправить</button>
+						<button type="reset" class="btn__reset">Сбросить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- login-modal -->
+		<div class="modal">
+			<div class="modal__container modal__login">
+				<button class="modal__btn modal__close">x</button>
+				<div class="modal__content">
+					<form action="">
+						<h2 class="modal__form-title">Login</h2>
+						<div class="input__box">
+							<input type="text" placeholder="UserName" required>
+						</div>
+						<div class="input__box">
+							<input type="password" placeholder="Password" required>
+						</div>
+						<div class="remember">
+							<label for="remember">
+								<input type="checkbox" name="remember" id="remember">
+								Запомнить меня
+							</label>
+							<a href="#!" class="remember__link forgot__password">Забыли пароль?</a>
+						</div>
+
+						<button type="submit" class="btn__login">Login</button>
+						<div class="register__box">
+							<a href="#!" class="">зарегистрироваться</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- registration-modal  -->
+		<div class="modal modal__registration">
+			<div class="modal__container ">
+				<button class="modal__btn modal__close">x</button>
+				<div class="modal__content">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et omnis tempora eos eveniet? Sunt quos delectus
+						necessitatibus aperiam nobis eligendi ad magni eveniet totam, atque iusto quae deserunt tempore! Velit!
+					</p>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer></footer>
+	<script src="../js/main.js"></script>
+</body>
+
+</html>
+
+<!-- <label for="name">Name</label>
+					<input type="text" name="userName" id="name" required />
+
+					<label for="password">Password</label>
+					<input type="password" name="password" id="password" required />
+
+					<button type="button" onclick="watchPassword()">watch password</button>
+
+					<label for="email">email</label>
+					<input type="email" name="email" id="email" required />
+
+					<label for="date">date</label>
+					<input type="date" name="name" id="date" required />
+
+					<label for="student">student</label>
+					<input type="checkbox" name="student" id="student" required />
+
+					<label for="male">male</label>
+					<input type="radio" name="gender" value="male" id="male" required />
+					<label for="female">female</label>
+					<input type="radio" name="gender" value="female" id="female" required />
+
+					<label for="passport">passport</label>
+					<input type="file" name="passport" id="passport" readonly>
+
+					<label for="exp">experience</label>
+					<select name="experience" id="exp">
+						<option value="0">experience 0</option>
+						<option value="1">experience 1 year</option>
+						<option value="2">experience 2 years</option>
+						<option value="5">experience 5 years</option>
+						<option value="7">experience 7 years</option>
+					</select>
+					<br> <br>
+					<label for="aboutMyself">расскажи о себе</label>
+					<textarea name="about" id="aboutMyself" rows="10"></textarea>
+					<br><br>
+					<button type="submit">login</button> -->

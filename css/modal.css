@@ -1,0 +1,109 @@
+.no__scroll {
+	overflow: hidden;
+}
+.modal,
+.modal__registration {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 9999;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow-y: auto;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.3s, visibility 0.3s;
+}
+
+.modal__container {
+	max-width: 500px;
+	width: 100%;
+	padding: 30px 15px;
+	margin: 30px 15px;
+	z-index: 1;
+	background-color: #fff;
+	transform: scale(0);
+	transition: transform 0.6s;
+}
+.modal__login {
+	position: relative;
+}
+.modal__close {
+	position: absolute;
+	right: 0;
+	top: 0;
+	border: solid 1px #000;
+	border-top: none;
+	border-right: none;
+	padding: 5px 10px;
+}
+.modal__close:hover {
+	background-color: red;
+}
+
+.modal.open,
+.modal__registration.open {
+	visibility: visible;
+	opacity: 1;
+}
+.modal.open .modal__container,
+.modal__registration.open .modal__container {
+	transform: scale(1);
+}
+.modal__form-title {
+	font-size: 36px;
+	text-align: center;
+}
+
+.input__box {
+	width: 100%;
+	height: 50px;
+	margin: 30px 0;
+}
+
+.input__box input {
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	border: none;
+	border-bottom: solid 2px red;
+	outline: none;
+	padding: 10px;
+}
+
+.input__box input::placeholder {
+	color: red;
+}
+
+.remember {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 16px;
+	margin: 10px 0;
+}
+.remember label {
+	cursor: pointer;
+}
+
+.remember label input {
+	accent-color: red;
+}
+.forgot__password {
+	color: rgb(53, 56, 226);
+}
+.forgot__password:hover {
+	text-decoration: underline;
+}
+
+.btn__login {
+	width: 100%;
+	padding: 8px 10px;
+	background-color: red;
+	color: #fff;
+	margin: 10px 0;
+}

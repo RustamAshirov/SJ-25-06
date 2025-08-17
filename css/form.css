@@ -1,0 +1,89 @@
+.form__title {
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.form {
+	width: 100%;
+	background-color: #eceade;
+	padding: 20px;
+}
+.form__user {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 20px 0;
+}
+.form__user label {
+	width: 100%;
+	width: 250px;
+}
+.form__user input,
+select,
+textarea {
+	max-width: 700px;
+	width: 100%;
+}
+.form__date {
+	align-items: flex-start !important;
+}
+.form__date input {
+	max-width: 150px;
+}
+
+.select__title h2 {
+	color: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	width: 100%;
+	width: 250px;
+}
+.form__married h2 {
+	color: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	width: 100%;
+	width: 250px;
+}
+
+.select__checkbox {
+	max-width: 700px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.select__checkbox label {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+.form__text textarea {
+	min-height: 120px;
+}
+
+.from__btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 50px;
+}
+.btn__submit,
+.btn__reset {
+	padding: 10px;
+}
+
+.btn__submit {
+	background-color: red;
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+}
+.btn__reset {
+	border: 2px solid red;
+	font-size: 20px;
+	font-weight: bold;
+}

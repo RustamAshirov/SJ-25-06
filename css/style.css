@@ -1,0 +1,77 @@
+html {
+	position: relative;
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	min-width: 320px;
+	min-height: 100vh;
+	font-family: serif;
+	font-size: 18px;
+	color: #000;
+	background-color: #fff;
+	line-height: 1.2;
+}
+
+img,
+svg {
+	max-width: 100%;
+	max-height: auto;
+	height: auto;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin: 0;
+	padding: 0;
+}
+fieldset {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+button {
+	padding: 0;
+	border: none;
+	cursor: pointer;
+	background-color: transparent;
+}
+
+input {
+	cursor: pointer;
+}
+
+.container {
+	--width: 1180px;
+	--padding: 30px;
+	max-width: calc(var(--width) + var(--padding) * 2);
+	margin: 0 auto;
+	padding: 0 var(--padding);
+}
+
+/* hover-эффекты работают только на ПК/ноуте */
+@media (hover: hover) and (pointer: fine) {
+	.btn:hover {
+		transform: scale(1.05);
+		background: red;
+	}
+}

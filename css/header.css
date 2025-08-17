@@ -1,0 +1,63 @@
+.header {
+	padding: 40px 0;
+	/* background-color: rgba(113, 216, 219, 0.986); */
+}
+.header__flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav__list {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* .nav__item:not(:last-child) {
+	margin-right: 15px;
+} */
+
+.nav__item + .nav__item {
+	margin-left: 15px;
+}
+.nav__item {
+	position: relative;
+	overflow: hidden;
+}
+
+.nav__item::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	left: -100%;
+	background-color: red;
+	transition-duration: 0.3s;
+}
+
+.header__profile {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 15px;
+}
+
+.header__btn {
+	padding: 10px 8px;
+	border: solid 1px #ff0000;
+	border-radius: 8px;
+}
+
+/* hover-эффекты работают только на ПК/ноуте */
+@media (hover: hover) and (pointer: fine) {
+	.nav__item:hover::after {
+		left: 0;
+	}
+	.header__btn:hover {
+		background-color: red;
+		color: #fff;
+		transition-duration: 0.3s;
+	}
+}
