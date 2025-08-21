@@ -46,9 +46,9 @@ body.no-scroll {
 }
 
 .modal-content {
+	position: relative;
 	width: 320px;
 	height: 420px;
-	position: relative;
 	perspective: 1200px;
 	-webkit-perspective: 1200px;
 }
@@ -88,7 +88,7 @@ body.no-scroll {
 	transform: rotateY(180deg);
 }
 
-.form {
+.form__modal {
 	position: absolute;
 	inset: 0;
 	padding: 26px;
@@ -103,19 +103,19 @@ body.no-scroll {
 	-webkit-backface-visibility: hidden;
 }
 
-.form h2 {
+.form__modal h2 {
 	text-align: center;
 	margin: 2px 0 8px;
 }
 
-.form input {
+.form__modal input {
 	padding: 12px 10px;
 	border: 1px solid #d6d6d6;
 	border-radius: 8px;
 	font-size: 14px;
 }
 
-.form button[type='submit'] {
+.form__modal button[type='submit'] {
 	padding: 12px;
 	border: 0;
 	border-radius: 8px;
@@ -125,11 +125,11 @@ body.no-scroll {
 	transition: filter 0.2s, transform 0.05s;
 }
 
-.form button[type='submit']:hover {
+.form__modal button[type='submit']:hover {
 	filter: brightness(1.03);
 }
 
-.form button[type='submit']:active {
+.form__modal button[type='submit']:active {
 	transform: translateY(1px);
 }
 
@@ -153,7 +153,8 @@ body.no-scroll {
 .link:hover {
 	text-decoration: none;
 }
-в .back {
+
+.back {
 	transform: rotateY(180deg);
 }
 
@@ -163,7 +164,7 @@ body.no-scroll {
 		height: 75vh;
 		max-height: 480px;
 	}
-	.form {
+	.form__modal {
 		padding: 20px;
 	}
 }
