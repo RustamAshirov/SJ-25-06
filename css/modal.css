@@ -153,8 +153,7 @@ body.no-scroll {
 .link:hover {
 	text-decoration: none;
 }
-
-.back {
+в .back {
 	transform: rotateY(180deg);
 }
 
