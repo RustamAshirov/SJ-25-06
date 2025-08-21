@@ -24,8 +24,8 @@
 				</ul>
 			</nav>
 			<div class="header__profile">
-				<button class="header__btn open__modal-btn">Войти</button>
-				<button class="header__btn open__modal-registration">Регистрация</button>
+				<button class="header__btn btn" id="openLogin">Войти</button>
+				<button class="header__btn btn" id="openRegister">Регистрация</button>
 			</div>
 		</div>
 	</header>
@@ -99,43 +99,40 @@
 				</form>
 			</div>
 		</div>
-		<!-- login-modal -->
-		<div class="modal">
-			<div class="modal__container modal__login">
-				<button class="modal__btn modal__close">x</button>
-				<div class="modal__content">
-					<form action="">
-						<h2 class="modal__form-title">Login</h2>
-						<div class="input__box">
-							<input type="text" placeholder="UserName" required>
-						</div>
-						<div class="input__box">
-							<input type="password" placeholder="Password" required>
-						</div>
-						<div class="remember">
-							<label for="remember">
-								<input type="checkbox" name="remember" id="remember">
-								Запомнить меня
-							</label>
-							<a href="#!" class="remember__link forgot__password">Забыли пароль?</a>
-						</div>
 
-						<button type="submit" class="btn__login">Login</button>
-						<div class="register__box">
-							<a href="#!" class="">зарегистрироваться</a>
-						</div>
+
+		<!-- модалка - вход и регистрация  -->
+		<div class="modal" id="modal" tabindex="-1" aria-hidden="true">
+			<div class="modal-content" role="dialog" aria-modal="true">
+				<button class="close-btn" id="closeBtn" aria-label="Закрыть">×</button>
+
+				<div class="form-box" id="formBox">
+					<!-- Лицевая часть - Вход -->
+					<form class="form front" autocomplete="on" novalidate>
+						<h2>Вход</h2>
+						<input type="email" placeholder="Email" required />
+						<input type="password" placeholder="Пароль" required />
+						<button type="submit">Войти</button>
+
+						<p class="switch">
+							Нет аккаунта?
+							<button type="button" class="link" id="toRegister">Зарегистрироваться</button>
+						</p>
 					</form>
-				</div>
-			</div>
-		</div>
-		<!-- registration-modal  -->
-		<div class="modal modal__registration">
-			<div class="modal__container ">
-				<button class="modal__btn modal__close">x</button>
-				<div class="modal__content">
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et omnis tempora eos eveniet? Sunt quos delectus
-						necessitatibus aperiam nobis eligendi ad magni eveniet totam, atque iusto quae deserunt tempore! Velit!
-					</p>
+
+					<!-- Обратная часть - Регистрация -->
+					<form class="form back" autocomplete="on" novalidate>
+						<h2>Регистрация</h2>
+						<input type="text" placeholder="Имя" required />
+						<input type="email" placeholder="Email" required />
+						<input type="password" placeholder="Пароль" required />
+						<button type="submit">Зарегистрироваться</button>
+
+						<p class="switch">
+							Уже есть аккаунт?
+							<button type="button" class="link" id="toLogin">Войти</button>
+						</p>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -145,42 +142,3 @@
 </body>
 
 </html>
-
-<!-- <label for="name">Name</label>
-					<input type="text" name="userName" id="name" required />
-
-					<label for="password">Password</label>
-					<input type="password" name="password" id="password" required />
-
-					<button type="button" onclick="watchPassword()">watch password</button>
-
-					<label for="email">email</label>
-					<input type="email" name="email" id="email" required />
-
-					<label for="date">date</label>
-					<input type="date" name="name" id="date" required />
-
-					<label for="student">student</label>
-					<input type="checkbox" name="student" id="student" required />
-
-					<label for="male">male</label>
-					<input type="radio" name="gender" value="male" id="male" required />
-					<label for="female">female</label>
-					<input type="radio" name="gender" value="female" id="female" required />
-
-					<label for="passport">passport</label>
-					<input type="file" name="passport" id="passport" readonly>
-
-					<label for="exp">experience</label>
-					<select name="experience" id="exp">
-						<option value="0">experience 0</option>
-						<option value="1">experience 1 year</option>
-						<option value="2">experience 2 years</option>
-						<option value="5">experience 5 years</option>
-						<option value="7">experience 7 years</option>
-					</select>
-					<br> <br>
-					<label for="aboutMyself">расскажи о себе</label>
-					<textarea name="about" id="aboutMyself" rows="10"></textarea>
-					<br><br>
-					<button type="submit">login</button> -->

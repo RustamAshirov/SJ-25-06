@@ -1,42 +1,40 @@
-// показать/скрыть пароль
-function watchPassword() {
-	const wp = document.getElementById('password');
-	wp.type = wp.type === 'password' ? 'text' : 'password';
+const modal = document.getElementById('modal');
+const formBox = document.getElementById('formBox');
+
+const openLogin = document.getElementById('openLogin');
+const openRegister = document.getElementById('openRegister');
+
+const closeBtn = document.getElementById('closeBtn');
+const toRegister = document.getElementById('toRegister');
+const toLogin = document.getElementById('toLogin');
+
+function openModal(showRegister = false) {
+	modal.classList.add('active');
+	document.body.classList.add('no-scroll');
+	// Сразу нужная сторона
+	formBox.classList.toggle('flipped', showRegister);
+	// Фокус для доступности
+	modal.focus();
 }
 
-// элементы
-const modalLogin = document.querySelector('.modal');
-const modalRegistration = document.querySelector('.modal__registration');
-const btnOpenLogin = document.querySelector('.open__modal-btn');
-const btnOpenRegistration = document.querySelector('.open__modal-registration');
-const modalCloses = document.querySelectorAll('.modal__close');
+function closeModal() {
+	modal.classList.remove('active');
+	document.body.classList.remove('no-scroll');
+}
 
-// открыть модалки
-btnOpenLogin.addEventListener('click', () => {
-	modalLogin.classList.add('open');
-	document.body.classList.add('no__scroll');
+// Открыть снаружи
+openLogin.addEventListener('click', () => openModal(false));
+openRegister.addEventListener('click', () => openModal(true));
+
+// Переключатели внутри модалки
+toRegister.addEventListener('click', () => formBox.classList.add('flipped'));
+toLogin.addEventListener('click', () => formBox.classList.remove('flipped'));
+
+// Закрытие: крестик, фон, Esc
+closeBtn.addEventListener('click', closeModal);
+modal.addEventListener('click', (e) => {
+	if (e.target === modal) closeModal();
 });
-
-btnOpenRegistration.addEventListener('click', () => {
-	modalRegistration.classList.add('open');
-	document.body.classList.add('no__scroll');
-});
-
-// закрытие по кнопке "x"
-modalCloses.forEach((btn) => {
-	btn.addEventListener('click', () => {
-		modalLogin.classList.remove('open');
-		modalRegistration.classList.remove('open');
-		document.body.classList.remove('no__scroll');
-	});
-});
-
-// закрытие по клику на фон
-[modalLogin, modalRegistration].forEach((modal) => {
-	modal.addEventListener('click', (e) => {
-		if (e.target === modal) {
-			modal.classList.remove('open');
-			document.body.classList.remove('no__scroll');
-		}
-	});
+document.addEventListener('keydown', (e) => {
+	if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
 });

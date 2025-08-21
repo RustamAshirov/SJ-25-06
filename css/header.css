@@ -33,7 +33,7 @@
 	height: 2px;
 	bottom: 0;
 	left: -100%;
-	background-color: red;
+	background-color: #007bff;
 	transition-duration: 0.3s;
 }
 
@@ -56,7 +56,7 @@
 		left: 0;
 	}
 	.header__btn:hover {
-		background-color: red;
+		background-color: #007bff;
 		color: #fff;
 		transition-duration: 0.3s;
 	}

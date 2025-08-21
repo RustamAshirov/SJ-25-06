@@ -1,109 +1,170 @@
-.no__scroll {
+body.no-scroll {
 	overflow: hidden;
 }
-.modal,
-.modal__registration {
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100vh;
-	z-index: 9999;
-	background-color: rgba(0, 0, 0, 0.7);
+
+.btns {
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	overflow-y: auto;
-	visibility: hidden;
+	gap: 20px;
+	padding: 48px 16px;
+}
+
+.btn {
+	padding: 12px 24px;
+	background: #007bff;
+	color: #fff;
+	border: 0;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: 0.25s;
+}
+
+.btn:hover {
+	background: #0056b3;
+}
+
+.modal {
+	position: fixed;
+	inset: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 1000;
 	opacity: 0;
-	transition: opacity 0.3s, visibility 0.3s;
 }
 
-.modal__container {
-	max-width: 500px;
-	width: 100%;
-	padding: 30px 15px;
-	margin: 30px 15px;
-	z-index: 1;
-	background-color: #fff;
-	transform: scale(0);
-	transition: transform 0.6s;
+.modal.active {
+	display: flex;
+	animation: fadeIn 0.35s forwards;
 }
-.modal__login {
+
+@keyframes fadeIn {
+	to {
+		opacity: 1;
+	}
+}
+
+.modal-content {
+	width: 320px;
+	height: 420px;
 	position: relative;
+	perspective: 1200px;
+	-webkit-perspective: 1200px;
 }
-.modal__close {
+
+.close-btn {
 	position: absolute;
-	right: 0;
-	top: 0;
-	border: solid 1px #000;
-	border-top: none;
-	border-right: none;
-	padding: 5px 10px;
-}
-.modal__close:hover {
-	background-color: red;
-}
-
-.modal.open,
-.modal__registration.open {
-	visibility: visible;
-	opacity: 1;
-}
-.modal.open .modal__container,
-.modal__registration.open .modal__container {
-	transform: scale(1);
-}
-.modal__form-title {
-	font-size: 36px;
+	top: 10px;
+	right: 12px;
+	width: 36px;
+	height: 36px;
+	border: 0;
+	border-radius: 50%;
+	background: #ffffffcc;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	font-size: 22px;
+	line-height: 36px;
 	text-align: center;
+	cursor: pointer;
+	z-index: 10;
+	transition: transform 0.2s, background 0.2s;
 }
 
-.input__box {
-	width: 100%;
-	height: 50px;
-	margin: 30px 0;
+.close-btn:hover {
+	transform: scale(1.08);
+	background: #fff;
 }
 
-.input__box input {
+.form-box {
 	width: 100%;
 	height: 100%;
-	background-color: transparent;
-	border: none;
-	border-bottom: solid 2px red;
-	outline: none;
-	padding: 10px;
+	position: relative;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	transition: transform 0.8s ease;
+}
+.form-box.flipped {
+	transform: rotateY(180deg);
 }
 
-.input__box input::placeholder {
-	color: red;
-}
-
-.remember {
+.form {
+	position: absolute;
+	inset: 0;
+	padding: 26px;
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	font-size: 16px;
-	margin: 10px 0;
-}
-.remember label {
-	cursor: pointer;
+	flex-direction: column;
+	justify-content: center;
+	gap: 14px;
+	background: #fff;
+	border-radius: 14px;
+	box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
 }
 
-.remember label input {
-	accent-color: red;
+.form h2 {
+	text-align: center;
+	margin: 2px 0 8px;
 }
-.forgot__password {
-	color: rgb(53, 56, 226);
+
+.form input {
+	padding: 12px 10px;
+	border: 1px solid #d6d6d6;
+	border-radius: 8px;
+	font-size: 14px;
 }
-.forgot__password:hover {
+
+.form button[type='submit'] {
+	padding: 12px;
+	border: 0;
+	border-radius: 8px;
+	background: #28a745;
+	color: #fff;
+	cursor: pointer;
+	transition: filter 0.2s, transform 0.05s;
+}
+
+.form button[type='submit']:hover {
+	filter: brightness(1.03);
+}
+
+.form button[type='submit']:active {
+	transform: translateY(1px);
+}
+
+.switch {
+	margin: 6px 0 0;
+	text-align: center;
+	font-size: 14px;
+	color: #555;
+}
+
+.link {
+	background: none;
+	border: 0;
+	padding: 0 2px;
+	font: inherit;
+	color: #007bff;
+	cursor: pointer;
 	text-decoration: underline;
 }
 
-.btn__login {
-	width: 100%;
-	padding: 8px 10px;
-	background-color: red;
-	color: #fff;
-	margin: 10px 0;
+.link:hover {
+	text-decoration: none;
+}
+
+.back {
+	transform: rotateY(180deg);
+}
+
+@media (max-width: 400px) {
+	.modal-content {
+		width: 92vw;
+		height: 75vh;
+		max-height: 480px;
+	}
+	.form {
+		padding: 20px;
+	}
 }
