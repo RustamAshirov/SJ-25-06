@@ -18,30 +18,129 @@
 				<ul class="nav__list">
 					<li class="nav__item"><a href="index.html" class="nav__link" title="Главная">Главная</a></li>
 					<li class="nav__item"><a href="pages/form.html" class="nav__link" title="Форма">Форма</a></li>
-					<li class="nav__item"><a href="#!" class="nav__link" title="3-страница">3-страница</a></li>
-					<li class="nav__item"><a href="#!" class="nav__link" title="4-страница">4-страница</a></li>
-					<li class="nav__item"><a href="#!" class="nav__link" title="5-страница">5-страница</a></li>
+					<li class="nav__item"><a href="#!" class="nav__link" title="HTML">Справочник</a>
+						<ul class="submenu__list">
+							<li class="submenu__item"><a href="" class="submenu__link" title="HTML">HTML</a></li>
+							<li class="submenu__item"><a href="" class="submenu__link" title="CSS">CSS</a></li>
+							<li class="submenu__item"><a href="" class="submenu__link" title="JS">JS</a></li>
+						</ul>
+					</li>
+					<li class="nav__item"><a href="#!" class="nav__link" title="Контакты">Контакты</a></li>
+					<li class="nav__item"><a href="#!" class="nav__link" title="Контакты">n-страница</a></li>
 				</ul>
 			</nav>
 			<div class="header__profile">
-				<button class="header__btn btn" id="openLogin">Войти</button>
-				<button class="header__btn btn" id="openRegister">Регистрация</button>
+				<button class="header__btn" id="openLogin">Войти</button>
+				<button class="header__btn" id="openRegister">Регистрация</button>
 			</div>
 		</div>
 	</header>
 	<main>
+		<section class="hero">
+			<!-- 	<img src="image/111.jpg" alt=" фото по программирование"> -->
+			<div class="container hero__flex">
+				<h1 class="hero__title title">lorem</h1>
+				<div class="hero__box">
+					<p class="hero__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis placeat facere
+						facilis maxime molestiae voluptas nihil voluptatibus asperiores. Magni sed recusandae voluptates culpa
+						maiores nesciunt porro cumque libero doloribus ipsam!</p>
+				</div>
+				<a href="#!" class="hero__link">Подробно</a>
+			</div>
+		</section>
 
 
+		<section class="project">
+			<div class="container project__flex">
+				<h2 class="project__title title">Lorem, ipsum.</h2>
+				<ul class="project__list">
+					<li class="project__item">
+						<img class="project__item-img" src="image/111.jpg" alt="project-1">
+						<div class="project__item-descr">
+							<p class="project__text">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas deleniti magni
+								odit sunt dignissimos dolorum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+								similique!
+							</p>
+						</div>
+					</li>
+					<li class="project__item">
+						<img class="project__item-img" src="image/111.jpg" alt="project-1">
+						<div class="project__item-descr">
+							<p class="project__text">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas deleniti magni
+								odit sunt dignissimos dolorum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+								similique!
+							</p>
+						</div>
+					</li>
+					<li class="project__item">
+						<img class="project__item-img" src="image/111.jpg" alt="project-1">
+						<div class="project__item-descr">
+							<p class="project__text">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas deleniti magni
+								odit sunt dignissimos dolorum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+								similique!
+							</p>
+						</div>
+					</li>
+					<li class="project__item">
+						<img class="project__item-img" src="image/111.jpg" alt="project-1">
+						<div class="project__item-descr">
+							<p class="project__text">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas deleniti magni
+								odit sunt dignissimos dolorum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+								similique!
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
 
-
+		<section class="contact-us">
+			<div class="container contact-us__flex">
+				<h2 class="contact-us__title">Связаться с нами</h2>
+				<div class="contact-us__content">
+					<div class="contact-us__links">
+						<a class="contact-us__prhone" href="tel:+998909999999">+998(90) 999-99-99</a>
+						<a class="contact-us__email" href="mailto:info@company.uz">info@company.uz</a>
+						<button class="contact-us__map">Ташкент, ул.Амиру Темур, 15</button>
+						<ul class="contact-us__list social">
+							<li class="contact-us__item">
+								<a href="#!" class="contact-us__social"></a>
+							</li>
+							<li class="contact-us__item">
+								<a href="#!" class="contact-us__social"></a>
+							</li>
+							<li class="contact-us__item">
+								<a href="#!" class="contact-us__social"></a>
+							</li>
+							<li class="contact-us__item">
+								<a href="#!" class="contact-us__social"></a>
+							</li>
+						</ul>
+					</div>
+					<div class="contact-us__form-box">
+						<form class="contact-us__form">
+							<input type="text" placeholder="Имя">
+							<input type="email" placeholder="Email">
+							<textarea name="text" id="" placeholder="Сообщение"></textarea>
+							<button type="submit">Отправить</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<!-- модалка - вход и регистрация  -->
 		<div class="modal" id="modal" tabindex="-1" aria-hidden="true">
 			<div class="modal-content" role="dialog" aria-modal="true">
-				<button class="close-btn" id="closeBtn" aria-label="Закрыть">×</button>
+				<!-- <button class="close-btn" id="closeBtn" aria-label="Закрыть">×</button> -->
 
 				<div class="form-box" id="formBox">
 					<!-- Лицевая часть - Вход -->
+					<button class="close-btn" id="closeBtn" aria-label="Закрыть">×</button>
 					<form class="form__modal front" autocomplete="on" novalidate>
 						<h2>Вход</h2>
 						<input type="email" placeholder="Email" required />
@@ -71,7 +170,11 @@
 			</div>
 		</div>
 	</main>
-	<footer></footer>
+	<footer class="footer">
+		<div class="container footer__flex">
+
+		</div>
+	</footer>
 	<script src="js/main.js"></script>
 </body>
 

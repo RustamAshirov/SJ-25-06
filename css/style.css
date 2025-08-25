@@ -1,3 +1,25 @@
+:root {
+	/* Основные цвета */
+	--bg: #007bff;
+	--bg-alt: #f5f5f5;
+
+	/* Текст */
+	--text-primary: #222222;
+	--text-secondary: #ffffff;
+
+	/* Акцент */
+	--accent: #007bff;
+	--accent-hover: #0056b3;
+
+	/* Бордеры */
+	--border: #dddddd;
+	--border-hover: #aaaaaa;
+
+	/* Ошибки/успех */
+	--error: #ff4d4d;
+	--success: #28a745;
+}
+
 html {
 	position: relative;
 	box-sizing: border-box;
@@ -70,8 +92,42 @@ input {
 
 /* hover-эффекты работают только на ПК/ноуте */
 @media (hover: hover) and (pointer: fine) {
+	/* header btn hover */
+	.nav__item:hover .nav__link::after {
+		left: 0;
+	}
+	.header__btn:hover {
+		background-color: #007bff;
+		color: #fff;
+		transition-duration: 0.3s;
+	}
+
 	.btn:hover {
 		transform: scale(1.05);
 		background: red;
+	}
+
+	/* modal hover */
+
+	.link:hover {
+		text-decoration: none;
+	}
+
+	.form__modal button[type='submit']:hover {
+		filter: brightness(1.03);
+	}
+
+	.form__modal button[type='submit']:active {
+		transform: translateY(1px);
+	}
+
+	.close-btn:hover {
+		transform: scale(1.08);
+		background: red;
+		color: #fff;
+	}
+
+	.btn:hover {
+		background: #0056b3;
 	}
 }

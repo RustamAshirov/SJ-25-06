@@ -19,10 +19,6 @@ body.no-scroll {
 	transition: 0.25s;
 }
 
-.btn:hover {
-	background: #0056b3;
-}
-
 .modal {
 	position: fixed;
 	inset: 0;
@@ -54,12 +50,14 @@ body.no-scroll {
 }
 
 .close-btn {
+	position: relative;
 	position: absolute;
 	top: 10px;
 	right: 12px;
 	width: 36px;
 	height: 36px;
 	border: 0;
+	border: 1px solid #007bff;
 	border-radius: 50%;
 	background: #ffffffcc;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -69,11 +67,17 @@ body.no-scroll {
 	cursor: pointer;
 	z-index: 10;
 	transition: transform 0.2s, background 0.2s;
+	z-index: 99999;
 }
 
-.close-btn:hover {
-	transform: scale(1.08);
-	background: #fff;
+.close-btn::before {
+	content: '';
+	position: absolute;
+	left: 14px;
+	top: -12px;
+	width: 20%;
+	height: 12px;
+	background-color: #007bff;
 }
 
 .form-box {
@@ -125,14 +129,6 @@ body.no-scroll {
 	transition: filter 0.2s, transform 0.05s;
 }
 
-.form__modal button[type='submit']:hover {
-	filter: brightness(1.03);
-}
-
-.form__modal button[type='submit']:active {
-	transform: translateY(1px);
-}
-
 .switch {
 	margin: 6px 0 0;
 	text-align: center;
@@ -148,10 +144,6 @@ body.no-scroll {
 	color: #007bff;
 	cursor: pointer;
 	text-decoration: underline;
-}
-
-.link:hover {
-	text-decoration: none;
 }
 
 .back {
