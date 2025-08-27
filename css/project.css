@@ -1,0 +1,71 @@
+.project {
+	margin-bottom: 100px;
+}
+.project__flex {
+	align-items: center;
+}
+.project__title {
+	text-align: center;
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+.project__list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 30px;
+}
+.project__item {
+	min-width: 320px;
+	display: flex;
+	border-radius: 8px;
+	overflow: hidden;
+	gap: 20px;
+	box-shadow: 4px 4px 47px 0px rgba(34, 60, 80, 0.35);
+}
+
+.project__item:nth-child(odd) {
+	margin-left: 0;
+	margin-right: auto;
+}
+
+.project__item:nth-child(even) {
+	margin-left: auto;
+	margin-right: 0;
+	flex-direction: row-reverse;
+}
+.project__item-img {
+	flex: 0 0 40%;
+	/*фиксируемширину40%*/
+	max-width: 400px;
+	height: auto;
+	scale: 1;
+	transition: scale 0.3s ease;
+}
+.project__item-descr {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 20px;
+}
+.project__text {
+	display: -webkit-box;
+	-webkit-line-clamp: 5;
+	-webkit-box-orient: vertical;
+	line-height: 1.5;
+	overflow: hidden;
+}
+
+.project__link {
+	color: var(--accent);
+	margin-top: 10px;
+}
+
+.project__item:nth-child(odd) .project__link {
+	align-self: flex-end;
+}
+
+.project__item:nth-child(even) .project__link {
+	align-self: flex-start;
+}

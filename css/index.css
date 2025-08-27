@@ -1,6 +1,9 @@
 @import 'normalize.css';
 @import 'style.css';
 @import 'modal.css';
+@import 'modal-map.css';
 @import 'header.css';
 @import 'hero.css';
+@import 'project.css';
+@import 'contact-us.css';
 @import 'form.css';

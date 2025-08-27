@@ -1,0 +1,35 @@
+/* затемнение фона */
+.modal-map {
+	display: none;
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.6);
+	justify-content: center;
+	align-items: center;
+	z-index: 99999;
+}
+
+/* окно */
+.modal-content-map {
+	background: #fff;
+	width: 80%;
+	max-width: 800px;
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+}
+
+/* кнопка закрытия */
+.close-map {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	font-size: 24px;
+	cursor: pointer;
+	scale: 1;
+	transition: scale 0.3s ease;
+}
+
+.close-map:hover {
+	scale: 2;
+}

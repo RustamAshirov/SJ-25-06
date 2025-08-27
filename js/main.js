@@ -11,9 +11,9 @@ const toLogin = document.getElementById('toLogin');
 function openModal(showRegister = false) {
 	modal.classList.add('active');
 	document.body.classList.add('no-scroll');
-	// Сразу нужная сторона
+
 	formBox.classList.toggle('flipped', showRegister);
-	// Фокус для доступности
+
 	modal.focus();
 }
 
@@ -22,19 +22,39 @@ function closeModal() {
 	document.body.classList.remove('no-scroll');
 }
 
-// Открыть снаружи
 openLogin.addEventListener('click', () => openModal(false));
 openRegister.addEventListener('click', () => openModal(true));
 
-// Переключатели внутри модалки
 toRegister.addEventListener('click', () => formBox.classList.add('flipped'));
 toLogin.addEventListener('click', () => formBox.classList.remove('flipped'));
 
-// Закрытие: крестик, фон, Esc
 closeBtn.addEventListener('click', closeModal);
 modal.addEventListener('click', (e) => {
 	if (e.target === modal) closeModal();
 });
 document.addEventListener('keydown', (e) => {
 	if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+});
+
+/* modal map */
+const openBtnMap = document.getElementById('openMap');
+const modalMap = document.getElementById('mapModal');
+const closeBtnMap = document.getElementById('closeMap');
+
+openBtnMap.addEventListener('click', (e) => {
+	e.preventDefault();
+	modalMap.style.display = 'flex';
+	document.body.classList.add('no-scroll');
+});
+
+closeBtnMap.addEventListener('click', () => {
+	modalMap.style.display = 'none';
+	document.body.classList.remove('no-scroll');
+});
+
+modalMap.addEventListener('click', (e) => {
+	if (e.target === modalMap) {
+		modalMap.style.display = 'none';
+		document.body.classList.remove('no-scroll');
+	}
 });

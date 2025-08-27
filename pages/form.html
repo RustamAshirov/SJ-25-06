@@ -17,15 +17,21 @@
 			<nav class="nav">
 				<ul class="nav__list">
 					<li class="nav__item"><a href="../index.html" class="nav__link" title="Главная">Главная</a></li>
-					<li class="nav__item"><a href="form.html" class="nav__link" title="Форма">Форма</a></li>
-					<li class="nav__item"><a href="#!" class="nav__link" title="3-страница">3-страница</a></li>
-					<li class="nav__item"><a href="#!" class="nav__link" title="4-страница">4-страница</a></li>
-					<li class="nav__item"><a href="#!" class="nav__link" title="5-страница">5-страница</a></li>
+					<li class="nav__item"><a href="./form.html" class="nav__link" title="Форма">Форма</a></li>
+					<li class="nav__item"><a href="#!" class="nav__link" title="HTML">Справочник</a>
+						<ul class="submenu__list">
+							<li class="submenu__item"><a href="" class="submenu__link" title="HTML">HTML</a></li>
+							<li class="submenu__item"><a href="" class="submenu__link" title="CSS">CSS</a></li>
+							<li class="submenu__item"><a href="" class="submenu__link" title="JS">JS</a></li>
+						</ul>
+					</li>
+					<li class="nav__item"><a href="#!" class="nav__link" title="Контакты">Контакты</a></li>
+					<li class="nav__item"><a href="#!" class="nav__link" title="Контакты">n-страница</a></li>
 				</ul>
 			</nav>
 			<div class="header__profile">
-				<button class="header__btn btn" id="openLogin">Войти</button>
-				<button class="header__btn btn" id="openRegister">Регистрация</button>
+				<button class="header__btn" id="openLogin">Войти</button>
+				<button class="header__btn" id="openRegister">Регистрация</button>
 			</div>
 		</div>
 	</header>
@@ -104,10 +110,11 @@
 		<!-- модалка - вход и регистрация  -->
 		<div class="modal" id="modal" tabindex="-1" aria-hidden="true">
 			<div class="modal-content" role="dialog" aria-modal="true">
-				<button class="close-btn" id="closeBtn" aria-label="Закрыть">×</button>
+				<!-- <button class="close-btn" id="closeBtn" aria-label="Закрыть">×</button> -->
 
 				<div class="form-box" id="formBox">
 					<!-- Лицевая часть - Вход -->
+					<button class="close-btn" id="closeBtn" aria-label="Закрыть">×</button>
 					<form class="form__modal front" autocomplete="on" novalidate>
 						<h2>Вход</h2>
 						<input type="email" placeholder="Email" required />
