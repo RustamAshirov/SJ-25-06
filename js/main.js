@@ -37,7 +37,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 /* modal map */
-const openBtnMap = document.getElementById('openMap');
+/* const openBtnMap = document.getElementById('openMap');
 const modalMap = document.getElementById('mapModal');
 const closeBtnMap = document.getElementById('closeMap');
 
@@ -57,4 +57,15 @@ modalMap.addEventListener('click', (e) => {
 		modalMap.style.display = 'none';
 		document.body.classList.remove('no-scroll');
 	}
+});
+ */
+
+/* адаптив для кнопки вход и регистрации  */
+
+const burgerBtn = document.querySelector('.header__burger');
+console.log('найден бургер:', burgerBtn);
+
+burgerBtn.addEventListener('click', () => {
+	alert('клик по бургеру!');
+	console.log('click');
 });

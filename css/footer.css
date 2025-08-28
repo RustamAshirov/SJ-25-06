@@ -1,0 +1,35 @@
+.footer {
+	background: #222222;
+	color: #ffffff;
+	padding: 30px 0;
+	font-size: 14px;
+}
+.footer-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.footer-logo {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.footer-copy {
+	color: #aaa;
+}
+.footer-copy span {
+	color: var(--accent);
+}
+
+.footer-socials__link {
+	margin-left: 15px;
+	display: inline-block;
+	transition: 0.3s;
+	color: #fff;
+}
+
+.footer-socials__link:hover {
+	color: var(--accent);
+}

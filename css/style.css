@@ -1,3 +1,22 @@
+@font-face {
+	font-family: 'Ubuntu';
+	font-weight: 400;
+	font-style: normal;
+	src: url('../fonts/Ubuntu-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Ubuntu';
+	font-weight: 500;
+	font-style: normal;
+	src: url('../fonts/Ubuntu-Medium.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Ubuntu';
+	font-weight: 700;
+	font-style: normal;
+	src: url('../fonts/Ubuntu-Bold.ttf') format('truetype');
+}
+
 :root {
 	/* Основные цвета */
 	--bg: #007bff;
@@ -23,6 +42,7 @@
 html {
 	position: relative;
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 *,
 *::before,
@@ -31,9 +51,11 @@ html {
 }
 
 body {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 400;
+	font-style: normal;
 	min-width: 320px;
 	min-height: 100vh;
-	font-family: serif;
 	font-size: 18px;
 	color: var(--text-primary);
 	background-color: #fff;
@@ -93,6 +115,29 @@ input {
 	padding: 0 var(--padding);
 }
 
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--bg);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #094686;
+}
+
+::-webkit-scrollbar-track {
+	background: #f5f5f5;
+}
+
+* {
+	scrollbar-width: thin;
+	scrollbar-color: var(--bg) var(--bg-alt);
+}
+
 /* hover-эффекты работают только на ПК/ноуте */
 @media (hover: hover) and (pointer: fine) {
 	/* header btn hover */
@@ -148,5 +193,22 @@ input {
 
 	.project__item:hover .project__item-img {
 		scale: 1.03;
+	}
+
+	/* contact-us */
+	.contact-us__form button:hover {
+		color: var(--accent);
+		background-color: var(--bg-alt);
+	}
+
+	.contact-us__phone:hover,
+	.contact-us__email:hover,
+	.contact-us__map:hover {
+		text-decoration: underline;
+	}
+
+	.contact-us__social:hover {
+		background-color: #fff;
+		color: var(--bg);
 	}
 }
